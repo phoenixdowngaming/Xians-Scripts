@@ -11,5 +11,3 @@ while {true} do
 				_unit removeWeapon "hgun_ACPC2_F";
 			}
 	};
-	
-hint "Jigsaw's awesome!";
