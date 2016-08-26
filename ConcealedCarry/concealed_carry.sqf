@@ -10,7 +10,7 @@ private ["_rnum"];
 _rnum = missionNamespace getVariable "_rnum";
 if (isNil "_rnum") then
 {
-	_rnum = (floor random 5);
+	_rnum = (floor random 10);
 };
 
 switch (_rnum) do
@@ -20,6 +20,11 @@ switch (_rnum) do
 	case 2: {_unit addMagazine "16Rnd_9x21_Mag";_unit addWeapon "hgun_P07_F";};
 	case 3: {_unit addMagazine "6Rnd_45ACP_Cylinder";_unit addWeapon "hgun_Pistol_heavy_02_F";};
 	case 4: {_unit addMagazine "16Rnd_9x21_Mag";_unit addWeapon "hgun_Rook40_F";};
+	case 5: {};
+	case 6: {};
+	case 7: {};
+	case 8: {};
+	case 9: {};
 };
 	
 
