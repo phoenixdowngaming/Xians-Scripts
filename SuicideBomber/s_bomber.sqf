@@ -1,5 +1,5 @@
 {
-    if (random 1 < 0.99) then {
+    if (random 1 < 0.10) then {
         _x addEventHandler ["FiredNear", {
             params ["_unit", "_shooter", "_distance"];
             if (
