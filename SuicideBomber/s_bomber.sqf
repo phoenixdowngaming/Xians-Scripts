@@ -1,9 +1,10 @@
 {
-    if (random 1 < 0.10) then {
+    if (random 1 < 0.06) then {
         _x addEventHandler ["FiredNear", {
             params ["_unit", "_shooter", "_distance"];
             if (
                 _distance > 30 ||
+				(isPlayer _unit) ||
                 {_unit getVariable ["hasTarget", false]} ||
                 {side _shooter == civilian}||
                 {side _shooter == east}
