@@ -1,10 +1,11 @@
 {
-    if (random 1 < 0.06) then {
+    if (random 1 < 0.03) then {
         _x addEventHandler ["FiredNear", {
-            params ["_unit", "_shooter", "_distance"];
+            params ["_unit", "_shooter", "_distance","_weapons"];
+			_weapons = weapons _unit;
             if (
+				(count _weapons) > 0 ||
                 _distance > 30 ||
-				(isPlayer _unit) ||
                 {_unit getVariable ["hasTarget", false]} ||
                 {side _shooter == civilian}||
                 {side _shooter == east}
@@ -23,6 +24,7 @@
             _unit setSkill ["courage", 1];
             _unit reveal [_shooter, 3.75];
             _unit setVariable ["hasTarget", true];
+			_unit addAction ["Disarm & Remove Vest","scripts\xian_civlians\s_bomb_disarm.sqf",[],1,false,true,"","_this distance _target < 2"];
 			
 ////////////Handle bomber's movements////////////
             [_unit, _shooter,_expl] spawn {
@@ -31,9 +33,9 @@
 					_unit doMove (position _shooter);
                     sleep 1;
 					!alive _unit ||
-                    {_shooter distance _unit < 3}
+                    {_shooter distance _unit < 2}
                 };
-				if (!alive _unit) exitWith {deleteVehicle _expl;_unit addAction ["Disarm & Remove Vest","s_bomb_disarm.sqf",[],1,false,true,"","_this distance _target < 2"];};
+				if (!alive _unit) exitWith {deleteVehicle _expl;};
                 _unit setVariable ["hasTarget", false];
 				detach _expl;
 				_expl setDamage 1;
@@ -44,6 +46,5 @@
 } forEach (allUnits select {side _x == civilian});
 sleep 60;
 
-0 = [] execVM "s_bomber.sqf";
-
+0 = [] execVM "scripts\xian_civilians\s_bomber.sqf";
 
