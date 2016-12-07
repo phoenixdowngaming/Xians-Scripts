@@ -2,7 +2,6 @@
 _x addEventHandler ["Killed",{ [(_this select 0), (_this select 1)] execVM "xian_ai_Kill.sqf";}];
 */
 
- 
 private [
 "_unit",
 "_killer",
@@ -18,10 +17,12 @@ _unit           = _this select 0;
 _killer         = _this select 1;
 _playerObj      = objNull;
 _roadKilled     = false;
-_distance	= round (_unit distance _killer);
+_distance		= round (_unit distance _killer);
 
-_killMsg = ["AI WACKED","AI CLIPPED","AI ERASED","AI WRECKED","AI NEUTRALIZED","AI SNUFFED","AI WASTED"] call BIS_fnc_selectRandom;
-_killMsgRoad = ["ROADKILL","FENDER BENDER","ROAD RAGE","SPLATTERED","NEW PAINT JOB"] call BIS_fnc_selectRandom;
+
+_killMsg = ["ENEMY WACKED","ENEMY CLIPPED","ENEMY ERASED","ENEMY WRECKED","ENEMY NEUTRALIZED","ENEMY SNUFFED","ENEMY WASTED","BAD GUY WACKED","BAD GUY CLIPPED","BAD GUY ERASED","BAD GUY WRECKED","BAD GUY NEUTRALIZED","BAD GUY SNUFFED","BAD GUY WASTED"] call BIS_fnc_selectRandom;
+_killMsgRoad = ["ROADKILL","FENDER BENDER","ROAD RAGE","SPLATTERED","NEW PAINT JOB","VEHICULAR MANSLAUGHTER","WHOOPSIES","BEEP BEEP","SPEED BUMP"] call BIS_fnc_selectRandom;
+
 
 if (isPlayer _killer) then
 {
@@ -36,6 +37,6 @@ if (isPlayer _killer) then
 };
 switch (_roadKilled) do
 	{
-		case (true) : {hint format ["%1\n\n%2\n\n%3", _killMsg,_distance];};
-		case (false) : {hint format ["%1\n\n%2\n\n%3", _killMsgRoad,_distance];};
+		case (true) : {[format["<t size='0.5' color='#FF0000' t shadow='2'>%1<br/>%2 meters</t>",_killMsg, _distance],-0.8,0.8,6,2] spawn BIS_fnc_dynamicText;};
+		
 	};
