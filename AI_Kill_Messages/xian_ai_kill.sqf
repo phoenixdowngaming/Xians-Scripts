@@ -39,4 +39,5 @@ switch (_roadKilled) do
 	{
 		case (true) : {[format["<t size='0.5' color='#FF0000' t shadow='2'>%1<br/>%2 meters</t>",_killMsg, _distance],-0.8,0.8,6,2] spawn BIS_fnc_dynamicText;};
 		
+		case (false) : {[format["<t size='0.5' color='#FF0000' t shadow='2'>%1<br/>%2 meters</t>",_killMsgRoad],-0.8,0.8,6,2] spawn BIS_fnc_dynamicText;};
 	};
