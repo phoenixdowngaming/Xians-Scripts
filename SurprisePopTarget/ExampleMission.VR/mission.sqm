@@ -1,0 +1,462 @@
+version=53;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
+	{
+		nextID=12;
+	};
+	class Camera
+	{
+		pos[]={3800.7224,11.243073,379.49966};
+		dir[]={-0.44017801,-0.47982237,-0.758973};
+		up[]={-0.24072686,0.87736434,-0.41507038};
+		aside[]={-0.86505747,2.4680048e-007,0.50170404};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"A3_Structures_F_Training",
+	"A3_Characters_F",
+	"ace_explosives",
+	"A3_Modules_F"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=4;
+		class Item0
+		{
+			className="A3_Structures_F";
+			name="Arma 3 - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="ace_explosives";
+			name="ACE3 - Explosives";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item3
+		{
+			className="A3_Modules_F";
+			name="Arma 3 Alpha - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+randomSeed=15049338;
+class ScenarioData
+{
+	author="Xian";
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		rainForced=1;
+		lightningsForced=1;
+		wavesForced=1;
+		windForced=1;
+		year=2035;
+		day=28;
+		hour=13;
+		minute=37;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=8;
+		class Item0
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3798.4602,6.0316133,359.78128};
+				angles[]={0,3.0971189,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="target_1";
+			};
+			id=0;
+			type="Target_PopUp_Moving_90deg_Acc2_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item1
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3792.9341,6.0316133,359.811};
+				angles[]={0,3.1873751,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="target_2";
+			};
+			id=1;
+			type="Target_PopUp_Moving_90deg_Acc2_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item2
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={3795.6479,6.0316133,367.29199};
+				angles[]={0,3.1719565,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="target_3";
+			};
+			id=2;
+			type="Target_PopUp2_Moving_Acc1_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_isMedicalFacility";
+					expression="_this setVariable [""ace_medical_isMedicalFacility"",_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item3
+		{
+			dataType="Trigger";
+			position[]={3800.1489,5,357.478};
+			class Attributes
+			{
+				condition="call{target_1 animationPhase ""terc"" > 0.1;}";
+				onActivation="call{0=[] execVM ""surprise_target.sqf"";}";
+				sizeA=0;
+				sizeB=0;
+				repeatable=1;
+			};
+			id=3;
+			type="EmptyDetector";
+		};
+		class Item4
+		{
+			dataType="Trigger";
+			position[]={3790.0229,5,356.67899};
+			class Attributes
+			{
+				condition="call{target_2 animationPhase ""terc"" > 0.1;}";
+				onActivation="call{0=[] execVM ""surprise_target.sqf"";}";
+				sizeA=0;
+				sizeB=0;
+				repeatable=1;
+			};
+			id=4;
+			type="EmptyDetector";
+		};
+		class Item5
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={3798.0132,5.0014391,371.37845};
+						angles[]={0,2.9966953,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="call{this addAction [""Reset Targets"", " \n " { " \n "  _targets = [target_1,target_2]; " \n "  {_x animate [""terc"", 0]} forEach _targets; " \n " } " \n "];}";
+						isPlayer=1;
+					};
+					id=6;
+					type="B_soldier_exp_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male03ENG";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						nAttributes=6;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=5;
+		};
+		class Item6
+		{
+			dataType="Trigger";
+			position[]={3789.0181,5,367.233};
+			class Attributes
+			{
+				condition="call{TargetCount < 1}";
+				onActivation="call{target_3 animate [""terc"", 1];}";
+				sizeA=0;
+				sizeB=0;
+				repeatable=1;
+			};
+			id=8;
+			type="EmptyDetector";
+		};
+		class Item7
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={3785.813,5,360.40701};
+			};
+			init="call{nopop = true}";
+			id=11;
+			type="Logic";
+		};
+	};
+	class Connections
+	{
+		class LinkIDProvider
+		{
+			nextID=3;
+		};
+		class Links
+		{
+			items=3;
+			class Item0
+			{
+				linkID=0;
+				item0=3;
+				item1=0;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item1
+			{
+				linkID=1;
+				item0=4;
+				item1=1;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item2
+			{
+				linkID=2;
+				item0=8;
+				item1=2;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+		};
+	};
+};
