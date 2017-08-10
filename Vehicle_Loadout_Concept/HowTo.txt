@@ -1,0 +1,2 @@
+load the mission using the mission.sqm and pay attention to the coding inside the trigger as well
+as the name of the trigger. That info is passed into the vehicle_stuff.sqf script.
