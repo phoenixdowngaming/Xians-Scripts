@@ -1,0 +1,3244 @@
+version=53;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
+	{
+		nextID=40;
+	};
+	class Camera
+	{
+		pos[]={896.61523,15.929738,3766.8088};
+		dir[]={-0.9048087,-0.30183333,-0.30062976};
+		up[]={-0.28645864,0.9533354,-0.095178276};
+		aside[]={-0.31533164,2.4563633e-008,0.94905668};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"rhs_c_troops",
+	"A3_Structures_F_Walls",
+	"A3_Characters_F_Orange",
+	"A3_Props_F_Orange_Humanitarian_Garbage"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=4;
+		class Item0
+		{
+			className="rhs_c_troops";
+			name="AFRF Infantry & Equipment";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item1
+		{
+			className="A3_Structures_F";
+			name="Arma 3 - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Characters_F_Orange";
+			name="Arma 3 Orange - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Props_F_Orange";
+			name="Arma 3 Orange - Decorative and Mission Objects";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+randomSeed=15060600;
+class ScenarioData
+{
+	author="Xian";
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		wavesForced=1;
+		windForced=1;
+		year=2035;
+		day=28;
+		hour=13;
+		minute=37;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=23;
+		class Item0
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={880.23938,5.0014391,3761.9089};
+						angles[]={0,3.1413,0};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						name="fs_1";
+					};
+					id=1;
+					type="rhs_mvd_izlom_rifleman";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_disableAI_move";
+							expression="_this disableAI 'MOVE'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_disableAI_target";
+							expression="_this disableAI 'TARGET'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Enh_disableAI_autocombat";
+							expression="_this disableAI 'AUTOCOMBAT'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RHS_Male05RUS";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="Enh_disableAI_autotarget";
+							expression="_this disableAI 'AUTOTARGET'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="Enh_disableAI_cover";
+							expression="_this disableAI 'COVER'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="Enh_disableAI_path";
+							expression="_this disableAI 'PATH'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=13;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=0;
+		};
+		class Item1
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={880.47772,7.5222192,3748.1675};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+			};
+			id=2;
+			type="Land_Canal_Wall_10m_F";
+			atlOffset=4.785511;
+		};
+		class Item2
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={870.62048,7.5222192,3748.1663};
+			};
+			side="Empty";
+			flags=1;
+			class Attributes
+			{
+			};
+			id=3;
+			type="Land_Canal_Wall_10m_F";
+			atlOffset=4.785511;
+		};
+		class Item3
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={878.62097,5.0014391,3761.927};
+						angles[]={0,3.1653817,0};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						name="fs_5";
+					};
+					id=9;
+					type="rhs_mvd_izlom_rifleman";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_disableAI_move";
+							expression="_this disableAI 'MOVE'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_disableAI_target";
+							expression="_this disableAI 'TARGET'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Enh_disableAI_autocombat";
+							expression="_this disableAI 'AUTOCOMBAT'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RHS_Male05RUS";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="Enh_disableAI_autotarget";
+							expression="_this disableAI 'AUTOTARGET'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="Enh_disableAI_cover";
+							expression="_this disableAI 'COVER'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="Enh_disableAI_path";
+							expression="_this disableAI 'PATH'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=13;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=8;
+		};
+		class Item4
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={875.96588,5.0014391,3762.0229};
+						angles[]={0,3.1283631,0};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						name="fs_3";
+					};
+					id=11;
+					type="rhs_mvd_izlom_rifleman";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_disableAI_move";
+							expression="_this disableAI 'MOVE'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_disableAI_target";
+							expression="_this disableAI 'TARGET'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Enh_disableAI_autocombat";
+							expression="_this disableAI 'AUTOCOMBAT'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RHS_Male05RUS";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="Enh_disableAI_autotarget";
+							expression="_this disableAI 'AUTOTARGET'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="Enh_disableAI_cover";
+							expression="_this disableAI 'COVER'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="Enh_disableAI_path";
+							expression="_this disableAI 'PATH'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=13;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=10;
+		};
+		class Item5
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={874.08917,5.0014391,3762.2385};
+						angles[]={0,3.1245918,0};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						name="fs_2";
+					};
+					id=13;
+					type="rhs_mvd_izlom_rifleman";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_disableAI_move";
+							expression="_this disableAI 'MOVE'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_disableAI_target";
+							expression="_this disableAI 'TARGET'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Enh_disableAI_autocombat";
+							expression="_this disableAI 'AUTOCOMBAT'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RHS_Male05RUS";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="Enh_disableAI_autotarget";
+							expression="_this disableAI 'AUTOTARGET'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="Enh_disableAI_cover";
+							expression="_this disableAI 'COVER'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="Enh_disableAI_path";
+							expression="_this disableAI 'PATH'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=13;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=12;
+		};
+		class Item6
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={871.98798,5.0014391,3761.9941};
+						angles[]={0,3.1391666,0};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						name="fs_4";
+					};
+					id=15;
+					type="rhs_mvd_izlom_rifleman";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_disableAI_move";
+							expression="_this disableAI 'MOVE'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_disableAI_target";
+							expression="_this disableAI 'TARGET'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Enh_disableAI_autocombat";
+							expression="_this disableAI 'AUTOCOMBAT'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="RHS_Male05RUS";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="Enh_disableAI_autotarget";
+							expression="_this disableAI 'AUTOTARGET'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="Enh_disableAI_cover";
+							expression="_this disableAI 'COVER'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="Enh_disableAI_path";
+							expression="_this disableAI 'PATH'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=13;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=14;
+		};
+		class Item7
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={879.98657,5.0014391,3751.2493};
+						angles[]={0,6.2100039,-0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						name="tar_1";
+					};
+					id=17;
+					type="C_IDAP_Man_AidWorker_07_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_disableAI_move";
+							expression="_this disableAI 'MOVE'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Enh_disableAI_target";
+							expression="_this disableAI 'TARGET'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Enh_disableAI_autocombat";
+							expression="_this disableAI 'AUTOCOMBAT'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male02ENG";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="Enh_disableAI_autotarget";
+							expression="_this disableAI 'AUTOTARGET'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="Enh_disableAI_cover";
+							expression="_this disableAI 'COVER'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="Enh_disableAI_path";
+							expression="_this disableAI 'PATH'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=13;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=16;
+		};
+		class Item8
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={878.13361,5.0014391,3751.3333};
+						angles[]={0,6.2082181,-0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						name="tar_2";
+					};
+					id=19;
+					type="C_IDAP_Man_AidWorker_07_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_disableAI_move";
+							expression="_this disableAI 'MOVE'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Enh_disableAI_target";
+							expression="_this disableAI 'TARGET'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Enh_disableAI_autocombat";
+							expression="_this disableAI 'AUTOCOMBAT'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male02ENG";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="Enh_disableAI_autotarget";
+							expression="_this disableAI 'AUTOTARGET'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="Enh_disableAI_cover";
+							expression="_this disableAI 'COVER'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="Enh_disableAI_path";
+							expression="_this disableAI 'PATH'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=13;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=18;
+		};
+		class Item9
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={875.93109,5.0014391,3751.1584};
+						angles[]={0,6.2079883,-0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						name="tar_3";
+					};
+					id=21;
+					type="C_IDAP_Man_AidWorker_07_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_disableAI_move";
+							expression="_this disableAI 'MOVE'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Enh_disableAI_target";
+							expression="_this disableAI 'TARGET'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Enh_disableAI_autocombat";
+							expression="_this disableAI 'AUTOCOMBAT'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male02ENG";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="Enh_disableAI_autotarget";
+							expression="_this disableAI 'AUTOTARGET'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="Enh_disableAI_cover";
+							expression="_this disableAI 'COVER'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="Enh_disableAI_path";
+							expression="_this disableAI 'PATH'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=13;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=20;
+		};
+		class Item10
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={873.94489,5.0014391,3751.0771};
+						angles[]={0,6.2021351,-0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						name="tar_4";
+					};
+					id=23;
+					type="C_IDAP_Man_AidWorker_07_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_disableAI_move";
+							expression="_this disableAI 'MOVE'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Enh_disableAI_target";
+							expression="_this disableAI 'TARGET'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Enh_disableAI_autocombat";
+							expression="_this disableAI 'AUTOCOMBAT'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male02ENG";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="Enh_disableAI_autotarget";
+							expression="_this disableAI 'AUTOTARGET'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="Enh_disableAI_cover";
+							expression="_this disableAI 'COVER'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="Enh_disableAI_path";
+							expression="_this disableAI 'PATH'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=13;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=22;
+		};
+		class Item11
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={871.95636,5.0014391,3751.1465};
+						angles[]={0,6.250957,-0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						name="tar_5";
+					};
+					id=25;
+					type="C_IDAP_Man_AidWorker_07_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Enh_disableAI_move";
+							expression="_this disableAI 'MOVE'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isSurrendered";
+							expression="if (_value) then {[objNull,[_this],true] call ace_captives_fnc_moduleSurrender}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Enh_disableAI_target";
+							expression="_this disableAI 'TARGET'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Enh_disableAI_autocombat";
+							expression="_this disableAI 'AUTOCOMBAT'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.99000001;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male02ENG";
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="Enh_disableAI_autotarget";
+							expression="_this disableAI 'AUTOTARGET'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute11
+						{
+							property="Enh_disableAI_cover";
+							expression="_this disableAI 'COVER'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute12
+						{
+							property="Enh_disableAI_path";
+							expression="_this disableAI 'PATH'";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=13;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=24;
+		};
+		class Item12
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={886.17297,5.0014391,3761.1169};
+						angles[]={0,4.0183587,0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						isPlayer=1;
+					};
+					id=29;
+					type="C_IDAP_Man_EOD_01_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="acex_headless_blacklist";
+							expression="_this setVariable [""acex_headless_blacklist"",_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=0;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="Enh_onKilledEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['killed',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="Enh_onRespawnEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['respawn',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male02ENGFRE";
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="Enh_onDamagedEvent";
+							expression="if !(_value == 'false') then {_this addEventHandler ['dammaged',_value]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="false";
+								};
+							};
+						};
+						nAttributes=6;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=28;
+		};
+		class Item13
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={880.073,6.4310002,3750.1931};
+				angles[]={1.5713024,0,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this hideObjectGlobal true;}";
+				name="blood1";
+			};
+			id=30;
+			type="BloodPool_01_Medium_New_F";
+			atlOffset=1.4260001;
+		};
+		class Item14
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={877.93701,6.4310002,3750.197};
+				angles[]={1.5707318,4.5877504,0.00049188279};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this hideObjectGlobal true;}";
+				name="blood2";
+			};
+			id=31;
+			type="BloodPool_01_Medium_New_F";
+			atlOffset=1.4260001;
+		};
+		class Item15
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={876.039,6.5880003,3750.1851};
+				angles[]={1.570552,0,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this hideObjectGlobal true;}";
+				name="blood3";
+			};
+			id=32;
+			type="BloodSplatter_01_Medium_New_F";
+			atlOffset=1.5830002;
+		};
+		class Item16
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={874.06299,5.934,3750.188};
+				angles[]={1.5718783,1.891518,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this hideObjectGlobal true;}";
+				name="blood4";
+			};
+			id=33;
+			type="BloodSplatter_01_Large_New_F";
+			atlOffset=0.9289999;
+		};
+		class Item17
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={871.90002,6.401,3750.189};
+				angles[]={1.5737982,0,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="call{this hideObjectGlobal true;}";
+				name="blood5";
+			};
+			id=34;
+			type="BloodSplatter_01_Small_New_F";
+			atlOffset=1.3959999;
+		};
+		class Item18
+		{
+			dataType="Trigger";
+			position[]={884.93103,5,3750.804};
+			class Attributes
+			{
+				condition="call{!alive tar_1}";
+				onActivation="call{blood1 hideObjectGlobal false;}";
+				sizeA=0;
+				sizeB=0;
+			};
+			id=35;
+			type="EmptyDetector";
+		};
+		class Item19
+		{
+			dataType="Trigger";
+			position[]={885.27002,5,3751.4741};
+			class Attributes
+			{
+				condition="call{!alive tar_2}";
+				onActivation="call{blood2 hideObjectGlobal false;}";
+				sizeA=0;
+				sizeB=0;
+			};
+			id=36;
+			type="EmptyDetector";
+		};
+		class Item20
+		{
+			dataType="Trigger";
+			position[]={885.66101,5,3752.0891};
+			class Attributes
+			{
+				condition="call{!alive tar_3}";
+				onActivation="call{blood3 hideObjectGlobal false;}";
+				sizeA=0;
+				sizeB=0;
+			};
+			id=37;
+			type="EmptyDetector";
+		};
+		class Item21
+		{
+			dataType="Trigger";
+			position[]={886.03003,5,3752.635};
+			class Attributes
+			{
+				condition="call{!alive tar_4}";
+				onActivation="call{blood4 hideObjectGlobal false;}";
+				sizeA=0;
+				sizeB=0;
+			};
+			id=38;
+			type="EmptyDetector";
+		};
+		class Item22
+		{
+			dataType="Trigger";
+			position[]={886.3147,5,3753.1909};
+			class Attributes
+			{
+				condition="call{!alive tar_5}";
+				onActivation="call{blood5 hideObjectGlobal false;}";
+				sizeA=0;
+				sizeB=0;
+			};
+			id=39;
+			type="EmptyDetector";
+		};
+	};
+};
