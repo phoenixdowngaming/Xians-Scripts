@@ -1,0 +1,34 @@
+enableDebugConsole = 1;
+ShowGPS = 1;
+respawn = "BASE";
+respawnDelay = 5;
+disabledAI = 1;
+overviewText = "City Power Grid Concept";
+overviewPicture = "images\pdglogo.jpg";
+author="XianGrim";
+OnLoadName = "City Power Grid Concept";
+OnLoadMission = "City Power Grid Concept";
+loadScreen = "images\pdglogo.jpg";
+
+
+class CfgSounds
+{
+	class power_down
+	{
+		name = "power_down";
+		sound[] = {"\sound\power_down.ogg",db+30, 1};
+		titles[] = {1, ""};
+	};
+	class electric_hum
+	{
+		name = "electric_hum";
+		sound[] = {"\sound\electric_hum.ogg",db+1, 1};
+		titles[] = {1, ""};
+	};
+	class bass_kick
+	{
+		name = "bass_kick";
+		sound[] = {"\sound\bass_kick.ogg",db+15, 1};
+		titles[] = {1, ""};
+	};
+};
