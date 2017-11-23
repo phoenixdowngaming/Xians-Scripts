@@ -1,0 +1,1 @@
+[] execVM "PowerGrid\addActions.sqf";
