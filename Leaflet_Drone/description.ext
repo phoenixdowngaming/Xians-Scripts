@@ -1,0 +1,38 @@
+class CfgLeaflets
+{
+	class West
+	{
+		text = "Text of the leaflet - DickButt";
+		texture = "images\DButt_CO.paa";
+	}
+	class East
+	{
+		text = "Text of the leaflet - Leaf One";
+		texture = "images\PDG_Leaf1_CO.paa";
+	}
+	class Guer
+	{
+		text = "Text of the leaflet - Leaf Two";
+		texture = "images\PDG_Leaf2_CO.paa";
+	}
+	class Civ
+	{
+		text = "Text of the leaflet - Leaf Three";
+		texture = "images\PDG_Leaf3_CO.paa";
+	}
+	class Custom_01
+	{
+		text = "Text of the leaflet - Red Cross Sox";
+		texture = "images\redCross_CO.paa";
+	}
+	class Custom_02
+	{
+		text = "Text of the leaflet - Heli Taxi";
+		texture = "images\taxi_CO.paa";
+	}
+	class Custom_03
+	{
+		text = "Text of the leaflet - Heli Taxi";
+		texture = "images\Lock_CO.paa";
+	}
+};
