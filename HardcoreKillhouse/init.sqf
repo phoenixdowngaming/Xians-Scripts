@@ -1,0 +1,4 @@
+KH_guys = [op,op_1,op_2,op_3,op_4,op_5,op_6,op_7,op_8,op_9,op_10,op_11,op_12,op_13,op_14,op_15,op_16,op_17,op_18,op_19,op_20,op_21,op_22,op_23,op_24,op_25,op_26,op_27,op_28,op_29,op_30,op_31,op_32,op_33,op_34,op_35,op_36,op_37,op_38,op_39,op_40,op_41,op_42,op_43,op_44,op_45,op_46,op_47,op_48,op_49,op_50,op_51,op_52,op_53,op_54,op_55,op_56,op_57,op_58,op_59,op_60,op_61,op_62,op_63,op_64,op_65,op_66,op_67,op_68,op_69,op_70,op_71,op_72,op_73,op_74,op_75,op_76,op_77,op_78,op_79,op_80,op_81,op_82,op_83,op_84,op_85,op_86,op_87,op_88,op_89,op_90,op_91,op_92,op_92,op_93,op_94,op_95,op_96,op_97,op_98,op_99];
+KH_trig = list kh_guys_trig;
+
+[] execVM "Hardcore_KH.sqf";

@@ -1,0 +1,14 @@
+enableDebugConsole		= 1;// 0 = Default behavior, available only in editor, 1 = Available in SP and for hosts / logged in admins, 2 = Available for everyone
+allowFunctionsRecompile	= 0;// 0 = Default behavior all funtions final, 1 = allow Recompile.
+allowFunctionsLog		= 0;// Log to rpt. 0 = Default behavior Disable, 1 = Enable.
+DisabledAI				= 1;// 0 = Default fills empty playable slots with AI, 1 = Don't fill the empty playable slots.
+joinUnassigned			= 1;// 0 = Forces joining players into the first empty slot, 1 = leaves player to select their own.
+Respawn					= 3;// Base
+RespawnDelay			= 5;
+RespawnDialog			= 1;// Show scoreboard at death. 0 = disabled; 1 = enabled (default)
+RespawnOnStart          = 0; // Disable respawn on start
+showGPS					= 0;// Allow GPS
+showCompass				= 0;// Allow Compass
+showMap					= 1;// Allow Map
+showWatch				= 0;// Allow Watch
+forceRotorLibSimulation	= 0;// Default value: 0 = options based; 1 = force enable; 2 = force disable
