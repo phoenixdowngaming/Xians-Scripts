@@ -1,0 +1,23 @@
+
+class CfgSounds
+{
+	class air_wrench
+	{
+		name = "air_wrench";
+		sound[] = {"\sounds\air_wrench.ogg",db+40, 1};
+		titles[] = {1, ""};
+	};
+	class liquid
+	{
+		name = "liquid";
+		sound[] = {"\sounds\liquid.ogg",db+40, 1};
+		titles[] = {1, ""};
+	};
+	class mech_clamp
+	{
+		name = "mech_clamp";
+		sound[] = {"\sounds\mech_clamp.ogg",db+40, 1};
+		titles[] = {1, ""};
+	};
+};
+
