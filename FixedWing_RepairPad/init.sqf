@@ -23,8 +23,12 @@ fnc_xian_checkDistance = {
 	_action = _this select 2;
 	_maxDist = 10;
 	_repairPad = repairPad_1;
-	//hint format ["%1\n%2",_veh,_unit];
-	if ((_veh distance _repairPad) <= _maxDist) then {0=[_veh] execVM "planeRepair.sqf";} else {
+	if ((_veh distance _repairPad) <= _maxDist) then {0=[_veh] execVM "scripts\planeRepair.sqf";} else {
 		hint format ["You are too far from a repair pad. Move %1 meters closer to begin servicing!",(floor (_veh distance _repairPad) -10)];
 	}
+};
+
+fnc_xian_respawnEH = {
+	_unit = _this select 0;
+	_unit addEventhandler ["GetInMan",{call fnc_xian_vehicleCheck}];
 };
