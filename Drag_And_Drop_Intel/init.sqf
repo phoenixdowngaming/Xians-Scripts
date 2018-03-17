@@ -1,0 +1,1 @@
+[] execVM "scripts\init_intel.sqf";
