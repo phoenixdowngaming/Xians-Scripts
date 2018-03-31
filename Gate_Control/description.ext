@@ -1,0 +1,16 @@
+enableDebugConsole = 1;
+ShowGPS = 1;
+respawn = "BASE";
+respawnDelay = 5;
+disabledAI = 1;
+
+
+class CfgSounds
+{
+	class gate_control
+	{
+		name = "gate_control";
+		sound[] = {"\sound\gate_control.ogg",db+20, 1};
+		titles[] = {1, ""};
+	};
+};
