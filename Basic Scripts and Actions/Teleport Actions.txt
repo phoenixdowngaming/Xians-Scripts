@@ -1,0 +1,10 @@
+
+this addAction ["Teleport to AO",{
+    _unitTeleporting = _this select 0;
+    _unitTeleporting setPos (getMarkerPos "teleport_marker");
+}];
+
+this addAction ["Teleport to Base",{
+    _unitTeleporting = _this select 0;
+    _unitTeleporting setPos {getMarkerPos "respawn_west");
+}];
