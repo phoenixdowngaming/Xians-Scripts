@@ -1,0 +1,20 @@
+enableDebugConsole = 1;
+respawn = "BASE";
+respawnDelay = 5;
+
+//This is the section that is most important. All the sounds are 'declared' here to be used in game
+class CfgSounds
+{
+	class jammer_loop
+	{
+		name = "jammer_loop";
+		sound[] = {"\sound\jammer_loop.ogg", db+1, 1};
+		titles[] = {1,""};
+	};
+	class power_down
+	{
+		name = "power_down";
+		sound[] = {"\sound\power_down.ogg", db+6, 1};
+		titles[] = {1,""};
+	};
+};
