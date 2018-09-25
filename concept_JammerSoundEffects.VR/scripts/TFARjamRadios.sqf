@@ -1,6 +1,6 @@
 /*
 Jam Radios script for TFAR created by Asherion and Rebel
-Version 0.1.0
+Version 0.2.0
 Available from: https://forums.bistudio.com/forums/topic/203810-release-radio-jamming-script-for-task-force-radio/
 
 This script will jam radios for all players within a given radius of a jamming vehicle
@@ -10,7 +10,7 @@ NOTE: It is recommended to call this script from initPlayerLocal.sqf if you want
 Parameter(s):
 0: ARRAY of object(s) (Required)- Entity(s) that will cause the radios to be jammed.
 1: NUMBER (Optional)- Range of the jammer in Meters. Default is 1000.
-2: NUMBER (Optional)- Strength of the jammer. Default is 100.
+2: NUMBER (Optional)- Strength of the jammer. Default is 50.
 3: BOOL (Optional)- Enable Debug. Default is False.
 Example: jamRadios = [[JAMMER],500] execVM "TFARjamRadios.sqf";
 */
@@ -21,7 +21,7 @@ waituntil {!isnull player};
 //Define the variables along with their default values.
 _jammers = param [0, [objNull], [[objNull]]];
 _rad = param [1, 1000, [0]];
-_strength = param [2, 100, [0]] - 1; // Minus one so that radio interference never goes below 1 near the edge of the radius (which is the default for TFAR).
+_strength = param [2, 50, [0]] - 1; // Minus one so that radio interference never goes below 1 near the edge of the radius (which is the default for TFAR).
 _debug = param [3, false, [true]];
 
 //compare distances between jammers and player to find nearest jammer and set it as _jammer
@@ -45,30 +45,32 @@ while {alive _jammer} do
     _dist = player distance _jammer;
     _distPercent = _dist / _rad;
     _interference = 1;
+	_sendInterference = 1;
 
     if (_dist < _rad) then {
-		_interference = _strength - (_distPercent * _strength) + 1;         
+		_interference = _strength - (_distPercent * _strength) + 1; // Calculat the recieving interference, which has to be above 1 to have any effect.
+		_sendInterference = 1/_interference; //Calculate the sending interference, which needs to be below 1 to have any effect.
     };
-    // Set the TF receiving and transmitting distance multipliers
+    // Set the TF receiving and sending distance multipliers
     player setVariable ["tf_receivingDistanceMultiplicator", _interference];
-	player setVariable ["tf_transmittingDistanceMultiplicator", _interference];
+	player setVariable ["tf_sendingDistanceMultiplicator", _sendInterference];
 	
     // Debug chat and marker.
 	if (_debug) then {
-		deletemarker "CIS_DebugMarker";
-		deletemarker "CIS_DebugMarker2";
+		deletemarkerLocal "CIS_DebugMarker";
+		deletemarkerLocal "CIS_DebugMarker2";
 		//Area marker
-		_debugMarker = createmarker ["CIS_DebugMarker", position _jammer];
-		_debugMarker setMarkerShape "ELLIPSE";
-		_debugMarker setMarkerSize [_rad, _rad];
+		_debugMarker = createmarkerLocal ["CIS_DebugMarker", position _jammer];
+		_debugMarker setMarkerShapeLocal "ELLIPSE";
+		_debugMarker setMarkerSizeLocal [_rad, _rad];
 		
 		//Position Marker
-		_debugMarker2 = createmarker ["CIS_DebugMarker2", position _jammer];
-		_debugMarker2 setMarkerShape "ICON";
-		_debugMarker2 setMarkerType "mil_dot";
-		_debugMarker2 setMarkerText format ["%1", _jammer];
+		_debugMarker2 = createmarkerLocal ["CIS_DebugMarker2", position _jammer];
+		_debugMarker2 setMarkerShapeLocal "ICON";
+		_debugMarker2 setMarkerTypeLocal "mil_dot";
+		_debugMarker2 setMarkerTextLocal format ["%1", _jammer];
 		
-		systemChat format ["Distance: %1, Percent: %2, Interference: %3", _dist,  100 * _distPercent, _interference];
+		systemChat format ["Distance: %1, Percent: %2, Interference: %3, Send Interference: %4", _dist,  100 * _distPercent, _interference, _sendInterference];
 		systemChat format ["Active Jammer: %1, Jammers: %2",_jammer, _jammers];
 		//copyToClipboard (str(Format ["Distance: %1, Percent: %2, Interference: %3", _dist,  100 * _distPercent, _interference]));
 	};
@@ -89,4 +91,4 @@ while {alive _jammer} do
 
 //Set TFR settings back to normal before exiting the script
 player setVariable ["tf_receivingDistanceMultiplicator", 1];
-player setVariable ["tf_transmittingDistanceMultiplicator", 1];
+player setVariable ["tf_sendingDistanceMultiplicator", 1];
