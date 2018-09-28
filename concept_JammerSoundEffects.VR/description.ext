@@ -8,7 +8,7 @@ class CfgSounds
 	class jammer_loop
 	{
 		name = "jammer_loop";
-		sound[] = {"\sound\jammer_loop.ogg", db+1, 1};
+		sound[] = {"\sound\jammer_Effect.ogg", db+30, 1};
 		titles[] = {1,""};
 	};
 	class power_down

@@ -8,6 +8,6 @@ while {true} do {
 		if ({isPlayer _x} count list _trig > 0) then
 	{
 		_jamsource say3D ["jammer_loop",20,0.25];
-		sleep 14.65;
+		sleep 3;
 	};
 };//the sound effect is 14.65 seconds long so every sound loop, we check if the player is within the triggers radius
