@@ -11,7 +11,7 @@ Dukes_Speed_Adjuster_fnc = {
 								player setAnimSpeedCoef 1;
 							};
 					};
-				hintSilent format ["Is UnderWater? %1\n Overland variable: %2\n gradAngle variable: %3\nPlayer Anim Speed: %4",(eyePos player select 2), overland, gradAngle,(getAnimSpeedCoef player)];
+				//hintSilent format ["Is UnderWater? %1\n Overland variable: %2\n gradAngle variable: %3\nPlayer Anim Speed: %4",(eyePos player select 2), overland, gradAngle,(getAnimSpeedCoef player)];
 			sleep 0.50; 
 		};
 	};
