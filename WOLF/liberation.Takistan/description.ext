@@ -1,0 +1,64 @@
+respawn = 3;
+respawndelay = 30;
+respawnButton = 1;
+disabledAI = true;
+
+enableDebugConsole = 1;
+allowFunctionsLog = 0;
+
+loadScreen="res\liberation.jpg";
+onLoadMission = "www.killahpotatoes.de";
+author = "[GREUH] Zbug, [GREUH] McKeewa, [KP] Wyqer";
+onLoadName = $STR_MISSION_TITLE;
+
+joinUnassigned = 0;
+
+#include "GREUH\UI\GREUH_interface.hpp"
+#include "ui\liberation_interface.hpp"
+#include "ui\liberation_notifications.hpp"
+#include "ui\mission_params.hpp"
+
+class CfgFunctions 
+{
+	#include "vcom\cfgFunctions.hpp"
+};
+
+class Extended_PreInit_EventHandlers {
+	VCM_CBASettings = call compile preprocessFileLineNumbers "Vcom\Functions\VCM_CBASettings.sqf";
+};
+
+class CfgDebriefing
+{
+	class End1
+	{
+		title =	$STR_SORRY;
+		subtitle = "";
+		description = $STR_COMMANDER_NOT_AUTHORIZED;
+		pictureBackground = "";
+	};
+};
+
+//Xian Edits
+class CfgLeaflets
+{
+	class West
+	{
+		text = "Text of the leaflet - DickButt";
+		texture = "images\DButt.paa";
+	}
+	class East
+	{
+		text = "Text of the leaflet - Leaf One";
+		texture = "images\PDG_Leaf1.paa";
+	}
+	class Guer
+	{
+		text = "Text of the leaflet - Leaf Two";
+		texture = "images\PDG_Leaf2.paa";
+	}
+	class Civ
+	{
+		text = "Text of the leaflet - Leaf Three";
+		texture = "images\PDG_Leaf3.paa";
+	}
+};
