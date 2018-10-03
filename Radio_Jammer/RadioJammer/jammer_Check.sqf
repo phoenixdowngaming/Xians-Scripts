@@ -2,7 +2,7 @@ private _jammer = _this select 0;//the jammer
 if (typeof _jammer == "Land_DataTerminal_01_F") then //check if the object Zeus placed is a Data Terminal aka Jammer
 	{
 		[_jammer,3] call BIS_fnc_dataTerminalAnimate;//Animate the jammer to be open and "on"
-		[_jammer] execVM "RadioJammer\TFARjamRadios.sqf";//activate Rebel's radio Jamming script, ALL CREDIT TO HIM FOR THIS, I MADE 0 EDITS TO HIS WORK
+		[[_jammer]] execVM "RadioJammer\TFARjamRadios.sqf";//activate Rebel's radio Jamming script, ALL CREDIT TO HIM FOR THIS, I MADE 0 EDITS TO HIS WORK
 		
 		_jamPos = getPos _jammer;//get the position of the jammer
 		_jamSource = "Land_HelipadEmpty_F" createVehicle [0,0,0];//create an invisible helipad to use as our sound source
